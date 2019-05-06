@@ -47,7 +47,7 @@ deploy-to-cluster:
         #username: $KUBERNETES_USERNAME
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
-        command: config set-context fernando-harris --namespace=fernando-harris --cluster=cluster-csdonbzmu2d --user=user-csdonbzmu2d
+        command: config set-context $KUBERNETES_CONTEXT --namespace=$KUBERNETES_NAMESPACE --cluster=cluster-csdonbzmu2d --user=user-csdonbzmu2d
 
     - kubectl:
         name: use context
