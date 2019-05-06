@@ -41,12 +41,12 @@ deploy-to-cluster:
         code: cat kubernetes.yml
     
     - kubectl:
-        name: use context and namespace
+        name: check context
         server: $KUBERNETES_MASTER
         #username: $KUBERNETES_USERNAME
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
-        command: config use-context fernando-harris
+        command: config current-context
 
     - kubectl:
         name: deploy to kubernetes
