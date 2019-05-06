@@ -55,7 +55,7 @@ deploy-to-cluster:
         #username: $KUBERNETES_USERNAME
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
-        command: config use-context fernando-harris
+        command: config use-context $KUBERNETES_CONTEXT
 
     - kubectl:
         name: deploy to kubernetes
